@@ -110,7 +110,9 @@ body:has(.nl) h3 { position: fixed; left: 0; right: 0; bottom: 0; margin: 0 0 16
 .dex h3.mlc-h2 { color: rgb(245, 245, 245); margin: 1.8em 0 .5em; }
 .dex h4.mlc-h3 { color: rgb(245, 245, 245); margin: 1.5em 0 .5em; }
 .dex h2.mlc-h1 a, .dex h3.mlc-h2 a { color: inherit; }
-.dex .mlc-mark { color: rgb(245, 245, 245); margin: 2em 0; }
+.dex .mlc-mark { display: grid; grid-template-columns: auto 1fr auto; width: fit-content; max-width: 100%; margin: 2.5em auto; text-align: center; color: rgb(245, 245, 245); }
+.mlc-mx, .mlc-md { grid-column: 1 / -1; white-space: nowrap; overflow: hidden; }  /* the box: xxxx on top, ---- below, iiii at the sides */
+.mlc-md { width: 0; min-width: 100%; }  /* the ---- row takes the box's width from the xxxx row */
 
 /* small print */
 p:has(> .mlc-lead) { color: rgb(245, 245, 245); }
