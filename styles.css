@@ -111,13 +111,10 @@ body:has(.nl) h3 { position: fixed; left: 0; right: 0; bottom: 0; margin: 0 0 16
 .dex h2.mlc-h1 a, .dex h3.mlc-h2 a { color: inherit; }
 .dex .mlc-mark { font-size: 1rem; color: rgb(245, 245, 245); margin: 2em 0; }
 
-/* small print and lists */
+/* small print */
 p:has(> .mlc-lead) { font-size: 1.3em; color: rgb(245, 245, 245); }
 p:has(> .bh-meta), p:has(> .mlc-note), p:has(> .mlc-tool), p:has(> .mlc-sign) { color: rgb(150, 150, 150); font-size: .85em; }
 p:has(> .mlc-tool) { margin: 0; }
-p:has(> .mlc-li) { padding-left: 1em; text-indent: -.8em; }
-p:has(> .mlc-li)::before { content: '- '; }
-p:has(> .mlc-l2) { margin-left: 1.2em; }
 blockquote.mlc-prompt { margin: 0 0 1em 1.2em; overflow-wrap: break-word; }
 .dex pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .85em; }
 .dex-page:has(#yourrole)::after { content: ''; display: block; height: 45vh; }  /* the blank after Your Role */
