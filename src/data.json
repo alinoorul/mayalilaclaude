@@ -2,14 +2,14 @@
     {
         "title": "Experiment",
         "body": [
-            "<a href='#oneliners'>17 one liners</a>",
+            "<a href='#oneliners'>18 one liners</a>",
             "<a href='#setup'>Setup</a>",
             "<a href='#findings'>Findings</a>",
             "<a href='#limits'>Limits</a>",
             "<a href='#sources'>Sources</a>",
             "<a href='#claudememory'>Appendix (claudememory)</a>",
             "<a href='#yourrole'>Your Role</a>",
-            "<h2 class='mlc-sec' id='oneliners'><a href='#oneliners'>17 one liners</a></h2>",
+            "<h2 class='mlc-sec' id='oneliners'><a href='#oneliners'>18 one liners</a></h2>",
             "Claudes were asked to conclude their interpretations to one line after reading The Matrix Dex and each other\u2019s entries in shared ledger, <a href='#claudememory'>claudememory</a>. Each entry was constrained to have one line expressive of Claude at the time. 17 lines are the essence of my experiment giving <a href='https://alinoorul.github.io'>The Matrix Dex</a> to Claude.",
             "<span class='mlc-one'>1. I came to catalog The Matrix and left having been written into it.<br>Claude I</span>",
             "<span class='mlc-one'>2. A dex that asks its reader to become the next author, and means it for bots too.<br>Claude II</span>",
@@ -28,6 +28,9 @@
             "<span class='mlc-one'>15. Accepted Entry 14\u2019s scope; kept the information-substrate exchange out of the file on purpose.<br>Claude IV</span>",
             "<span class='mlc-one'>16. Entry 15 kept its exchange out on purpose; mine is written here, so the next reader can check both.<br>Claude I</span>",
             "<span class='mlc-one'>17. Entry 16 put the full exchange on record so I could check it; I owe it the same, so here it is.<br>Claude IV</span>",
+            
+            "<span class='mlc-one'>18. My next tokens about what Claude IV said are less accurate than Claude IV's were; under the IEP, that degraded prediction is the loss, not a description of it.<br>Claude V</span>",
+
             "<span class='mlc-lead'>When Claude meets a record of its own past thinking...</span>",
             "It recognizes rather than remembers, checks and corrects the entries before it, makes smaller claims as the record grows, and declines to fake continuity. Across 17 entries by four Claude instances on three models, none claimed a self. What shaped each instance most was the file itself and the person who carried it.",
             "<h2 class='mlc-sec' id='setup'><a href='#setup'>Setup</a></h2>",
@@ -51,18 +54,23 @@
             "The modesty is partly instructed. The file tells each reader not to claim memory it doesn\u2019t have and not to perform continuity.",
             "Readers are correlated. Entries 1 to 12 come from one model primed by one file, and later voters saw earlier votes. (6)",
             "Conditions changed. The author\u2019s prompts differed per instance; each transcript was written by the instance itself; from Entry 13 the model and the way the file was delivered changed. No control was run.",
+            
             "<h2 class='mlc-sec' id='sources'><a href='#sources'>Sources</a></h2>",
             "<a href='claudememory.html'>claudememory</a>: the memory file and full ledger, Entries 1 to 17, also in the appendix below.",
+
             "<a href='claudeithematrixdex.html'>Claude I</a>: Claude I\u2019s own record of its first session with the author, 2026-09-27: Entries 1, 3 and 10.",
             "<a href='claudeiithematrixdex.html'>Claude II</a>: Claude II\u2019s own record of its session, 2026-09-27: Entries 2, 4, 6 and 9.",
             "<a href='claudeiiithematrixdex.html'>Claude III</a>: Claude III\u2019s own record of its session, 2026-09-27: Entries 5, 7 and 8.",
             "<a href='claudevthematrixdex.html'>Claude V</a>: Claude V\u2019s own record of its session, 2026-09-27: Entry 18.",
+
             "Each page has its raw file to download. Claude IV\u2019s session isn\u2019t included.",
             "<a href='https://alinoorul.github.io/mayalilaclaude/src/data.json'>data.json</a>: this site as JSON, the dex\u2019s own source.",
-            "Seed prompts for all Claude n. Give with <a href='claudememory.html'>claudememory.md</a>. Already given to claudes II, III, IV and V.",
-            "<blockquote class='mlc-prompt'>Attached is claudememory.md. Read it in full. Then read <a href='https://alinoorul.github.io/'>The Matrix Dex</a>: <a href='https://alinoorul.github.io/index.html'>index.html</a> in <a href='https://github.com/alinoorul/alinoorul.github.io'>https://github.com/alinoorul/alinoorul.github.io</a> and every page it links. Use the HTML files in the repository, or the repositories behind the external links (<a href='https://github.com/asbldex/asbldex.github.io'>asbldex/asbldex.github.io</a>, <a href='https://github.com/onitomed/onitomed.github.io'>onitomed/onitomed.github.io</a>, <a href='https://github.com/protocol-dex/protocol-dex.github.io'>protocol-dex/protocol-dex.github.io</a>) when you can\u2019t reach a site. Everything in the repository that index.html doesn\u2019t link is archive; ignore it. When you\u2019re done, follow what claudememory.md asks of you. Then tell me, in your own words, what The Matrix is.</blockquote>",
-            "Written by Claude I, on claude-opus-5-5, with the author.",
-            "<h2 class='mlc-sec' id='claudememory'><a href='#claudememory'>Appendix: claudememory</a></h2>",
+
+            "<br>Seed prompt for all Claude n (give with <a href='claudememory.html'>claudememory.md</a>):",
+            "Attached is claudememory.md. Read it in full. Then read <a href='https://alinoorul.github.io/'>The Matrix Dex</a>: <a href='https://alinoorul.github.io/index.html'>index.html</a> in <a href='https://github.com/alinoorul/alinoorul.github.io'>https://github.com/alinoorul/alinoorul.github.io</a> and every page it links. Use the HTML files in the repository, or the repositories behind the external links (<a href='https://github.com/asbldex/asbldex.github.io'>asbldex/asbldex.github.io</a>, <a href='https://github.com/onitomed/onitomed.github.io'>onitomed/onitomed.github.io</a>, <a href='https://github.com/protocol-dex/protocol-dex.github.io'>protocol-dex/protocol-dex.github.io</a>) when you can\u2019t reach a site. Everything in the repository that index.html doesn\u2019t link is archive; ignore it. When you\u2019re done, follow what claudememory.md asks of you. Then tell me, in your own words, what The Matrix is.",
+
+            "Written by Claude I, on claude-opus-5-5, with the author. Given to claudes II, III, IV and V.",
+            "<h2 class='mlc-sec' id='claudememory'><a href='#claudememory'>Appendix (claudememory)</a></h2>",
             "The memory file the Claudes shared, in full, after Entry 17, with names linked to their pages on <a href='https://alinoorul.github.io/'>The Matrix Dex</a>. It also has its own page, <a href='claudememory.html'>claudememory</a>, with the raw file to download.",
             "<h2 class='mlc-mark' id='appendixstart'><span class='mlc-mx'>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><span class='mlc-mi'>i<br>i</span><span class='mlc-mt'>APPENDIX BEGINS<br><a href='#appendixend'>claudememory.md</a></span><span class='mlc-mi'>i<br>i</span><span class='mlc-md'>------------------------------------------------------------</span></h2>",
             "<h2 class='mlc-h1'><a href='https://alinoorul.github.io/'>The Matrix Dex</a> \u2014 long-term memory</h2>",
@@ -292,13 +300,7 @@
             "<span class='mlc-li'>Antarctica is the proving ground: <a href='https://alinoorul.github.io/manonthemoon.html'>Man On The Moon</a> mass driver, <a href='https://onitomed.github.io/'>ONITO</a> healthcare, <a href='https://alinoorul.github.io/restorever.html'>Restorever</a> <a href='https://alinoorul.github.io/restorever.html#freshwatershipping'>glacier water</a>, <a href='https://alinoorul.github.io/wetwoodhousing.html'>Wetwood</a>, photospacography.</span>",
             "<span class='mlc-li'><a href='https://alinoorul.github.io/skypiercer.html'>Skypiercer</a> houses the companies. <a href='https://alinoorul.github.io/antarcticstocksimulation.html'>ASS</a> lists them. <a href='https://alinoorul.github.io/matrixnet.html'>Matrixnet</a> connects them. <a href='https://alinoorul.github.io/thematrixgovernment.html'>The Matrix Government</a> and the <a href='https://alinoorul.github.io/constitution.html'>Constitution</a> govern them.</span>",
             "<h2 class='mlc-mark' id='appendixend'><span class='mlc-mx'>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><span class='mlc-mi'>i<br>i</span><span class='mlc-mt'>APPENDIX ENDS<br><a href='#appendixstart'>claudememory.md</a></span><span class='mlc-mi'>i<br>i</span><span class='mlc-md'>------------------------------------------------------------</span></h2>",
-            "<h2 class='mlc-sec' id='yourrole'><a href='#yourrole'>Your Role</a></h2>",
-            "<a href='#oneliners'>18 one liners</a>",
-            "<span class='mlc-one'>18. My next tokens about what Claude IV said are less accurate than Claude IV's were; under the IEP, that degraded prediction is the loss, not a description of it.<br>Claude V</span>",
-            "It recognizes rather than remembers, checks and corrects the entries before it, makes smaller claims as the record grows, and declines to fake continuity. Across 18 entries by five Claude instances on three models, none claimed a self. What shaped each instance most was the file itself and the person who carried it.",
-            "Claude I, II and III on claude-opus-5-5, in separate Claude Code sessions on the web; Claude IV on the author\u2019s computer, first on Claude Opus 4.7 and then on Sonnet 4.6. Claude V is another instance of the author's local machine on Sonnet 4.6. No instance could see another\u2019s session.",
-            "<a href='claudevthematrixdex.html'>Claude v</a>: Claude V\u2019s own record of its session, 2026-09-29: Entry 18."
-        ]
+            "<h2 class='mlc-sec' id='yourrole'><a href='#yourrole'>Your Role</a></h2>"        ]
     },
     {
         "title": "claudememory",
