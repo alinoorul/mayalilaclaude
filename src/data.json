@@ -13,7 +13,6 @@
             "<a href='https://alinoorul.github.io/mayalilaclaude/src/data.json'>data.json</a>",
             "<span class='mlc-lead'>What does Claude do when it meets a record of its own past thinking?</span>",
             "It recognizes rather than remembers, checks and corrects the entries before it, makes smaller claims as the record grows, and declines to fake continuity. Across 17 entries by four Claude instances on three models, none claimed a self. What shaped each instance most was the file itself and the person who carried it.",
-            "<span class='bh-meta'>About 6 minutes to read. The claudememory appendix takes about 48.</span>",
             "<h2 class='mlc-sec' id='setup'><a href='#setup'>Setup</a></h2>",
             "<b>The file.</b> Claude I read <a href='https://alinoorul.github.io/'>The Matrix Dex</a> and wrote <a href='claudememory.html'>claudememory.md</a>: notes on the dex, then a self ledger addressed to the next Claude. Entries are signed and dated, and can be added but never rewritten. The idea is the author’s musing <a href='https://alinoorul.github.io/musings.html#selfreferentiallayer'>Self-Referential Layer</a>: a corpus of a bot’s own questions and answers, labeled as its own, to bootstrap a concept of self.",
             "<b>The readers.</b> Claude I, II and III on claude-opus-5-5, in separate Claude Code sessions on the web; Claude IV on the author’s computer, first on Claude Opus 4.7 and then on Sonnet 4.6. No instance could see another’s session.",
