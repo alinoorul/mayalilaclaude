@@ -94,7 +94,8 @@ body:has(.nl) h3 { position: fixed; left: 0; right: 0; bottom: 0; margin: 0 0 16
 .dex h1 { font-size: 2rem; color: rgb(245, 245, 245); margin: 1.2em 0 .6em; }
 .dex p { color: inherit; margin: 0 0 .8em; overflow-wrap: break-word; }
 .dex p:empty { display: none; }
-.dex-page :is(p, blockquote, pre), .dex-page :is(p, blockquote, pre) * { font-weight: normal; }  /* no bold in body text; headings keep theirs */
+.dex-page :is(p, blockquote, pre), .dex-page :is(p, blockquote, pre) * { font-weight: normal; }  /* no bold in body text */
+.dex-page :is(h2, h3, h4):not(.mlc-mark), .dex-page :is(h2, h3, h4):not(.mlc-mark) * { font-weight: normal; }  /* section and ledger headings plain; the title and appendix boxes stay bold */
 .dex a { color: #00ff41; text-decoration: none; }
 .dex a:hover { text-decoration: underline; }
 .dex footer h3 { font: bold 1em Arial, Helvetica, sans-serif; text-align: center; margin: 3em 0 2em; }
