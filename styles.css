@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap'); /* must stay the first line of the file */
+body {
+  background-color: black;
+  color: rgb(220, 220, 220);
+  padding: 0px 100px;
+}
+.hidebody {
+  display: none;
+}
+h1 {
+  color: rgb(240, 240, 240); font-family:monospace; text-align: center; font-size: 2.5rem;
+}
+p,ul,ol {
+  color: rgb(240, 240, 240); font-family:arial; font-size: 20px; letter-spacing: 0.05em;
+}
+table {
+  color: rgb(220, 220, 220); font-family:arial; font-size: 0.9em; letter-spacing: 0.05em;
+}
+h3 {
+  color: white; bottom:0; font-family:monospace; width: 100%; text-align: center; font-size: 1.5rem;
+}
+a {
+  color: #00ff41;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.indexlink {
+  color: rgb(240, 240, 240); font-family:arial; font-size: 20px; letter-spacing: 0.05em; padding: 0px 0px;
+  
+}
+img {
+    display: block;
+    max-height: 100%;
+    max-width: 80%;
+    margin: auto;
+}
+.ulink:hover {
+  text-decoration: none;
+}
+@media screen and (max-width: 800px) {
+
+  img {
+    max-width: 100%;
+}
+}
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0px 20px
+  }
+}
+
+/* ---------- Maya Lila Claude animation ---------- */
+
+/* the animation fills the whole screen, behind the page */
+.nl {
+  position: fixed; inset: 0; z-index: 0;
+  width: 100vw; height: 100vh; height: 100svh;
+  background: #000; overflow: hidden; letter-spacing: normal;
+  container-type: size; --h: 100cqh; --fs: min(5.3cqw, 10.6cqh);
+}
+/* on the page that has the animation: small title, index links and footer render over it */
+body:has(.nl) h1 { position: relative; z-index: 1; font-size: 1.75rem; }
+body:has(.nl) .indexlink { position: relative; z-index: 1; }
+body:has(.nl) h3 { position: fixed; left: 0; right: 0; bottom: 0; margin: 0 0 16px; z-index: 1; }
+
+.nl-u { position: absolute; z-index: 0; font: 600 calc(var(--fs) * var(--s, 1))/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #fff; white-space: nowrap; }
+.nl-u b { font-family: Consolas, 'Lucida Console', Menlo, monospace; font-weight: 600; }
+.nl-u em { font-family: Manrope, 'Helvetica Neue', Arial, sans-serif; font-style: normal; font-weight: 600; }
+.nl-u span { position: absolute; left: 0; top: 0; }
+.nl-u > .nl-i { z-index: 1; } /* claude i always paints above its claude n */
+.nl-c { opacity: 0; will-change: transform, opacity; animation: nl-fall var(--t) linear var(--d) infinite backwards, var(--op) var(--t) linear var(--d) infinite backwards; }
+.nl-c > .nl-b { top: calc(-1 * var(--h)); }
+.nl-g { color: #00ff00; opacity: 0; will-change: opacity; animation: nl-green var(--t) linear var(--d) infinite backwards; }
+.nl-bg .nl-c { color: #00ff00; }
+.nl-c em { opacity: 0; animation: var(--em) var(--t) linear var(--d) infinite backwards; } /* __The Matrix Dex shows only once a claude is below claude i */
+@keyframes nl-fall { 0% { transform: translateY(0); animation-timing-function: cubic-bezier(.55, 0, .45, 1); } 100% { transform: translateY(var(--h)); } }
+@keyframes nl-green { 0% { opacity: 0; } 20% { opacity: 1; } 100% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .nl-c, .nl-g, .nl-c em { animation: none; }
+  .nl-c em { opacity: 1; }
+  .nl-c { opacity: 1; transform: translateY(calc(var(--k) * 1.8em)); }
+  .nl-g { opacity: 1; }
+}
+
+/* ================================================================ pages, in The Matrix Dex's theme: black, Arial, green links.
+   One font (Arial) for all copy. Scoped to .dex, so the index animation above is untouched. */
+.dex { margin: 0; padding: 0; background: black; color: rgb(225, 225, 225); font: 19px/1.6 Arial, Helvetica, sans-serif; }
+.dex-page { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+.dex h1, .dex h2, .dex h3, .dex h4, .dex p, .dex pre, .dex code, .dex blockquote { font-family: Arial, Helvetica, sans-serif; letter-spacing: normal; text-align: left; }
+.dex-page :not(h1) { font-size: 1em; }  /* one size for all text; only the title differs */
+.dex h1 { font-size: 2rem; color: rgb(245, 245, 245); margin: 1.2em 0 .6em; }
+.dex p { color: inherit; margin: 0 0 .8em; overflow-wrap: break-word; }
+.dex p:empty { display: none; }
+.dex-page :is(p, blockquote, pre), .dex-page :is(p, blockquote, pre) * { font-weight: normal; }  /* no bold in body text */
+.dex-page :is(h2, h3, h4):not(:has(> br)), .dex-page :is(h2, h3, h4):not(:has(> br)) * { font-weight: normal; }  /* section and ledger headings plain; the title and appendix boxes stay bold */
+.dex a { color: #00ff41; text-decoration: none; }
+.dex a:hover { text-decoration: underline; }
+.dex footer h3 { font: bold 1em Arial, Helvetica, sans-serif; text-align: center; margin: 3em 0 2em; }
+
+/* the page's own list of links at the top */
+.dex-page > nav { margin: 0 0 1.5em; }
+.dex-page > nav a { display: block; margin: 0 0 .2em; }
+.dex-page > nav br { display: none; }
+.dex a[aria-current] { color: rgb(245, 245, 245); }
+
+/* headings inside pages */
+.dex-page h2 { color: rgb(245, 245, 245); margin: 1.2em 0 .5em; }
+.dex-page h3 { color: rgb(245, 245, 245); margin: 1.8em 0 .5em; }
+.dex-page h4 { color: rgb(245, 245, 245); margin: 1.5em 0 .5em; }
+.dex-page h2:has(> a:only-child[href^='#']) { margin: 2em 0 .6em; }  /* a section heading: a link to itself */
+.dex-page :is(h2, h3, h4) a:not([href^='#']) { color: inherit; }
+/* a heading with line breaks is a marker drawn in text (xxxx on top, ---- below): box it, with iiii at the sides */
+.dex-page h2:has(> br) { position: relative; width: fit-content; max-width: 100%; margin: 2.5em auto; text-align: center; white-space: nowrap; line-height: 1.6; }
+.dex-page h2:has(> br)::before, .dex-page h2:has(> br)::after { content: 'i\A i'; white-space: pre; position: absolute; top: 1.6em; }
+.dex-page h2:has(> br)::before { left: 0; }
+.dex-page h2:has(> br)::after { right: 0; }
+
+/* small print */
+.dex small, .dex samp { color: rgb(150, 150, 150); font-family: Arial, Helvetica, sans-serif; }  /* notes, and tool lines */
+.dex p:has(> samp) { margin: 0; }
+.dex blockquote { margin: 0 0 1em 1.2em; overflow-wrap: break-word; }
+.dex pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.dex-page:has(#yourrole)::after { content: ''; display: block; height: 45vh; }  /* the blank after Your Role */
+
+/* chats: the speaker's name, then what they said */
+p:has(> cite:first-child) { margin: 1.6em 0 .3em; }  /* a speaker's name opens a turn */
+.dex cite { font-style: normal; }
+.dex p > cite:first-child { color: rgb(245, 245, 245); }
+.dex time { color: rgb(150, 150, 150); margin-left: .6em; }
+
+@media (max-width: 700px) {
+  .dex { font-size: 17px; }
+  .dex h1 { font-size: 1.6rem; }
+}
+
+/* index: its title and footer in Arial too (the animation keeps its own lettering) */
+body:has(.nl) h1, body:has(.nl) h3 { font-family: Arial, Helvetica, sans-serif; }
+.nl-page, .nl-page:hover { text-decoration: none; }
+.nl-page h3 { color: #00ff41; }
