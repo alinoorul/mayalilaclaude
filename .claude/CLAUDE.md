@@ -626,9 +626,10 @@ Both repos keep the code on `backend` and `frontend` branches. `main` holds only
 ## Maya Lila Claude Dex (mayalilaclaude/, hidden: not linked from index.html)
 - Since 2026-09-29 the site lives in its own repo, github.com/alinoorul/mayalilaclaude (served at alinoorul.github.io/mayalilaclaude).
   Pipeline, and the only way to change it: edit src/data.json (content), src/styles.css (style), src/config.json (template);
-  dexweb 4.2.1; cd src && python run.py; copy src/gen/* to the repo root. Never edit HTML directly. The root holds the live pages;
-  raw files are in src/to_add/clear. Page files: experiment, claudememory, claudeithematrixdex, claudeiithematrixdex,
-  claudeiiithematrixdex (.html). No sticky index (the author removed it); The Matrix Dex's own look, no cards.
+  dexweb 4.2.1; cd src && python run.py. Never edit HTML directly. Since 2026-10-01 the web files live only in src/gen
+  (nothing is copied to the root; the root holds LICENSE and src/). src/ holds dexweb's files; raw files are in
+  src/to_add/clear. Page files: experiment, claudememory, claudeithematrixdex, claudeiithematrixdex, claudeiiithematrixdex,
+  claudevthematrixdex (.html). The author edits src/data.json by hand: change it in place, never regenerate it from a script. No sticky index (the author removed it); The Matrix Dex's own look, no cards.
   The notes below describe the earlier layout inside alinoorul.github.io.
 - Pushing: the author gave push access to alinoorul/mayalilaclaude and said yes to pushing the rebuild to main (2026-09-29).
   Main is what GitHub Pages serves. Push to main automatically after each change, without asking (author, 2026-09-29).
