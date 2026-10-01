@@ -95,38 +95,41 @@ body:has(.nl) h3 { position: fixed; left: 0; right: 0; bottom: 0; margin: 0 0 16
 .dex p { color: inherit; margin: 0 0 .8em; overflow-wrap: break-word; }
 .dex p:empty { display: none; }
 .dex-page :is(p, blockquote, pre), .dex-page :is(p, blockquote, pre) * { font-weight: normal; }  /* no bold in body text */
-.dex-page :is(h2, h3, h4):not(.mlc-mark), .dex-page :is(h2, h3, h4):not(.mlc-mark) * { font-weight: normal; }  /* section and ledger headings plain; the title and appendix boxes stay bold */
+.dex-page :is(h2, h3, h4):not(:has(> br)), .dex-page :is(h2, h3, h4):not(:has(> br)) * { font-weight: normal; }  /* section and ledger headings plain; the title and appendix boxes stay bold */
 .dex a { color: #00ff41; text-decoration: none; }
 .dex a:hover { text-decoration: underline; }
 .dex footer h3 { font: bold 1em Arial, Helvetica, sans-serif; text-align: center; margin: 3em 0 2em; }
 
 /* the page's own list of links at the top */
-.dex-page > p:has(> a:only-child) { margin: 0 0 .2em; }
-.dex-page > p:has(> a:only-child) + p:not(:has(> a:only-child)) { margin-top: 1.5em; }
+.dex-page > nav { margin: 0 0 1.5em; }
+.dex-page > nav a { display: block; margin: 0 0 .2em; }
+.dex-page > nav br { display: none; }
 .dex a[aria-current] { color: rgb(245, 245, 245); }
 
 /* headings inside pages */
-.dex .mlc-sec { margin: 2em 0 .6em; }
-.dex h2.mlc-h1 { color: rgb(245, 245, 245); margin: 1.2em 0 .5em; }
-.dex h3.mlc-h2 { color: rgb(245, 245, 245); margin: 1.8em 0 .5em; }
-.dex h4.mlc-h3 { color: rgb(245, 245, 245); margin: 1.5em 0 .5em; }
-.dex h2.mlc-h1 a, .dex h3.mlc-h2 a { color: inherit; }
-.dex .mlc-mark { display: grid; grid-template-columns: auto 1fr auto; width: fit-content; max-width: 100%; margin: 2.5em auto; text-align: center; color: rgb(245, 245, 245); }
-.mlc-mx, .mlc-md { grid-column: 1 / -1; white-space: nowrap; overflow: hidden; }  /* the box: xxxx on top, ---- below, iiii at the sides */
-.mlc-md { width: 0; min-width: 100%; }  /* the ---- row takes the box's width from the xxxx row */
+.dex-page h2 { color: rgb(245, 245, 245); margin: 1.2em 0 .5em; }
+.dex-page h3 { color: rgb(245, 245, 245); margin: 1.8em 0 .5em; }
+.dex-page h4 { color: rgb(245, 245, 245); margin: 1.5em 0 .5em; }
+.dex-page h2:has(> a:only-child[href^='#']) { margin: 2em 0 .6em; }  /* a section heading: a link to itself */
+.dex-page :is(h2, h3, h4) a:not([href^='#']) { color: inherit; }
+/* a heading with line breaks is a marker drawn in text (xxxx on top, ---- below): box it, with iiii at the sides */
+.dex-page h2:has(> br) { position: relative; width: fit-content; max-width: 100%; margin: 2.5em auto; text-align: center; white-space: nowrap; line-height: 1.6; }
+.dex-page h2:has(> br)::before, .dex-page h2:has(> br)::after { content: 'i\A i'; white-space: pre; position: absolute; top: 1.6em; }
+.dex-page h2:has(> br)::before { left: 0; }
+.dex-page h2:has(> br)::after { right: 0; }
 
 /* small print */
-p:has(> .mlc-lead) { color: rgb(245, 245, 245); }
-p:has(> .bh-meta), p:has(> .mlc-note), p:has(> .mlc-tool), p:has(> .mlc-sign) { color: rgb(150, 150, 150); }
-p:has(> .mlc-tool) { margin: 0; }
-blockquote.mlc-prompt { margin: 0 0 1em 1.2em; overflow-wrap: break-word; }
+.dex small, .dex samp { color: rgb(150, 150, 150); font-family: Arial, Helvetica, sans-serif; }  /* notes, and tool lines */
+.dex p:has(> samp) { margin: 0; }
+.dex blockquote { margin: 0 0 1em 1.2em; overflow-wrap: break-word; }
 .dex pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 .dex-page:has(#yourrole)::after { content: ''; display: block; height: 45vh; }  /* the blank after Your Role */
 
 /* chats: the speaker's name, then what they said */
-p:has(> .mlc-who) { margin: 1.6em 0 .3em; }
-.mlc-who { font-weight: bold; color: rgb(245, 245, 245); }
-.mlc-t { color: rgb(150, 150, 150); margin-left: .6em; }
+p:has(> cite:first-child) { margin: 1.6em 0 .3em; }  /* a speaker's name opens a turn */
+.dex cite { font-style: normal; }
+.dex p > cite:first-child { color: rgb(245, 245, 245); }
+.dex time { color: rgb(150, 150, 150); margin-left: .6em; }
 
 @media (max-width: 700px) {
   .dex { font-size: 17px; }
