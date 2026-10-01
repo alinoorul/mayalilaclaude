@@ -489,6 +489,7 @@ github.com/onitomed/standard-therapeutics-app ("web app for STP on ONITO backend
 - dexweb output is machine-generatable and machine-readable: a way for a person to communicate their written work, or their
   versions of The Matrix companies, to AI. Draft marketing copy: "Feel seen by artificial intelligence".
 - Definition: a dex is a written journal that AI can read. By definition, all dexs are CC0.
+- The plural of dex is "dexs", never "dexes" (author, 2026-10-01).
 
 ## Repository rules
 - Only `index.html` and the pages it links are the live website. Everything else in the root is
@@ -539,7 +540,7 @@ github.com/onitomed/standard-therapeutics-app ("web app for STP on ONITO backend
 11. **Matrixnet** → matrixnet.html: new internet (2025) governed by The Matrix. User devices are the servers. A return to Web 1.0
    with no ads. Matrixnet Bitcoin Bank (1 BTC guaranteed per user per year, commission revenue). Botnet (a browser of
    chatbot service bots: Tufts, News, Flight, Jobs bots). Controlled access (founder authorizes new users; this is the KYC and
-   anti-spam). Dexnet (public list of dexweb dexes). Spam-free email (3-way handshake with revocable tokens). Personal Databank
+   anti-spam). Dexnet (public list of dexweb dexs). Spam-free email (3-way handshake with revocable tokens). Personal Databank
    (home appliance that owns all your data and releases it time-scrambled only with consent; users own the software). Apps with
    Matrixnet Programmatic Access (MPA): every app usable through its GUI and as JSON, e.g. this dex via data.json.
 12. **Mayajaal** → mayajaal.html: Indian political party ("Matrix Party"). Manifesto 2025 (always 20 points) by
